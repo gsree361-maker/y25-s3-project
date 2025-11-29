@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - Donate Hope</title>
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}   
+body{
+  background-image: URL(girl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #f1f1f1;
+}
+
+header {
+  background-color: #e91e63;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.hero h2 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #c2185b;
+}
+
+.info, .about, .donate-form {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: #111010;
+  margin-bottom: 10px;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+  footer {
+  background: #111;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+<body>
+  <header>
+    <h1>Donate Hope</h1>
+  </header>
+
+  <section class="donate-form">
+    <h2>Donate Clothes or Food</h2>
+    <p>Please fill in the form below to schedule your donation pickup.</p>
+
+    <form id="donateForm">
+      <input type="text" id="name" placeholder="Your Name" required><br>
+      <input type="email" id="email" placeholder="Your Email" required><br>
+      <input type="text" id="address" placeholder="Your Address" required><br>
+      <select id="item" required>
+        <option value="">Select Donation Type</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>
+      </select><br>
+      <textarea id="message" placeholder="Additional details (optional)"></textarea><br>
+      <button type="submit">Submit Donation</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Donate Hope | Every act of kindness counts.</p>
+  </footer>
+
+  <script>
+    document.getElementById("donateForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      alert("Thank you for your donation! We'll contact you soon.");
+      window.location.href = "index.html"; // redirect to home after submission
+    });
+  </script>
+</body>
+</html>
