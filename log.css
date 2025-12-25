@@ -1,0 +1,143 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+/* BACKGROUND */
+body{
+  height:100vh;
+  background:
+    radial-gradient(circle at bottom, #ff9f1c33, transparent),
+    linear-gradient(#0f0f0f, #0a0a0a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* GRID FEEL */
+.scene{
+  width:100%;
+  height:100%;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:40px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* GLASS CARD */
+.glass-card{
+  width:900px;
+  height:480px;
+  display:flex;
+  border-radius:22px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+  overflow:hidden;
+}
+
+/* LEFT */
+.glass-left{
+  width:55%;
+  padding:45px;
+  color:white;
+  position:relative;
+}
+
+.badge{
+  background:linear-gradient(45deg,#ffb703,#fb8500);
+  padding:5px 12px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.glass-left h1{
+  font-size:46px;
+  margin:25px 0 10px;
+}
+
+.sub{
+  opacity:.8;
+}
+
+.tags{
+  position:absolute;
+  bottom:40px;
+}
+
+.tags span{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.15);
+  margin-right:10px;
+  font-size:13px;
+}
+
+/* RIGHT */
+.glass-right{
+  width:45%;
+  background:rgba(255,255,255,.85);
+  padding:45px;
+  text-align:center;
+  transform:skewX(-6deg);
+}
+
+.glass-right *{
+  transform:skewX(6deg);
+}
+
+.glass-right h2{
+  margin-bottom:30px;
+}
+
+.glass-right input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.glass-right button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:#000;
+  color:white;
+  cursor:pointer;
+}
+
+.small{
+  margin-top:12px;
+  font-size:13px;
+  opacity:.7;
+}
+/*animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

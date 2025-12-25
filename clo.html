@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Donate Clothes</title>
+<link rel="stylesheet" href="clo.css">
+</head>
+<body>
+
+<h1 class="title"> Donate Clothes</h1>
+<p class="subtitle">From your closet → to someone’s smile</p>
+
+<div class="journey">
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <h3>1️⃣ Choose Clothes Type</h3>
+    <div class="closet">
+      <div onclick="selectType(this)"> Men</div>
+      <div onclick="selectType(this)"> Women</div>
+      <div onclick="selectType(this)"> Kids</div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <h3>2️⃣ Condition of Clothes</h3>
+    <input type="range" min="1" max="3" value="2" id="condition">
+    <p id="conditionText">Good condition</p>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <h3>3️⃣ Upload Clothes Image</h3>
+    <input type="file" onchange="previewImage(event)">
+    <img id="preview">
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step impact">
+    <h3>💖 Your Impact</h3>
+    <p id="impactText">Your donation can help <b>3 people</b></p>
+  </div>
+
+</div>
+<!-- THANK YOU MESSAGE -->
+<div id="thankYouBox" class="thank-you">
+  <h2> Thank You for Donating!</h2>
+  <p>Your clothes will bring warmth and smiles to many lives.</p>
+</div>
+
+
+<button class="donate-btn">Donate Clothes</button>
+
+<script src="clo.js"></script>
+</body>
+</html>

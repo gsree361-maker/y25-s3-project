@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Stories</title>
+  <link rel="stylesheet" href="com.css">
+</head>
+<body>
+
+<h1 class="title"> Community Stories</h1>
+<p class="subtitle">Real stories. Real impact.</p>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+  <button onclick="filterStories('all')" class="active">All</button>
+  <button onclick="filterStories('food')">Food Help</button>
+  <button onclick="filterStories('clothes')"> Clothes Help</button>
+  <button onclick="filterStories('emergency')"> Emergency</button>
+</div>
+
+<!-- STORIES GRID -->
+<div class="stories">
+
+  <!-- STORY CARD -->
+  <div class="story-card food">
+    <img src="http://www.sarvasamarpitawamsamarpantrust.com/Backend_Assets/Uploads/Gallary/2024112311331816512813941188.png" alt="Food Help">
+    <blockquote>“We slept hungry until your food arrived.”</blockquote>
+
+    <audio controls>
+      <source src="audio/food-story.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="helped-btn" onclick="markHelped(this)">
+      🤍 You helped this story
+    </button>
+  </div>
+
+  <div class="story-card clothes">
+    <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2015/12/soundofhope.jpg" alt="Clothes Help">
+    <blockquote>“These clothes gave us dignity.”</blockquote>
+
+    <audio controls>
+      <source src="audio/clothes-story.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="helped-btn" onclick="markHelped(this)">
+      🤍 You helped this story
+    </button>
+  </div>
+
+  <div class="story-card emergency">
+    <img src="https://www.mccc.edu/pr/General/2020/images/Food_clothing_drive.jpg" alt="Emergency Help">
+    <blockquote>“Help reached us just in time.”</blockquote>
+
+    <audio controls>
+      <source src="audio/emergency-story.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="helped-btn" onclick="markHelped(this)">
+      🤍 You helped this story
+    </button>
+  </div>
+
+</div>
+
+<script src="com.js"></script>
+</body>
+</html>
